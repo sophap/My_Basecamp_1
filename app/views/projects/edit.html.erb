@@ -1,0 +1,14 @@
+<nav class="nav flex-column justify-content-right">
+  <a class="nav-link" href="#"> <img src="https://thumbs.dreamstime.com/b/eye-simple-icon-outline-vector-illustration-isolated-white-background-eps-file-available-125333237.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Project Overview</a>
+  <a class="nav-link" href="#"> <img src="https://previews.123rf.com/images/ylivdesign/ylivdesign2012/ylivdesign201238932/161017733-recycle-bin-icon-outline-style.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Delete Project</a>
+</nav>
+<h1>Editing project</h1>
+
+<%= render "form", project: @project %>
+
+<br>
+
+<div>
+  <%= link_to "Show this project", @project %> |
+  <%= link_to "Back to projects", projects_path %>
+</div>
