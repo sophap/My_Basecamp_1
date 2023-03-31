@@ -1,14 +1,32 @@
-<nav class="nav flex-column justify-content-right">
-  <a class="nav-link" href="#"> <img src="https://thumbs.dreamstime.com/b/eye-simple-icon-outline-vector-illustration-isolated-white-background-eps-file-available-125333237.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Project Overview</a>
-  <a class="nav-link" href="#"> <img src="https://previews.123rf.com/images/ylivdesign/ylivdesign2012/ylivdesign201238932/161017733-recycle-bin-icon-outline-style.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Delete Project</a>
-</nav>
-<h1>Editing project</h1>
 
-<%= render "form", project: @project %>
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <h1>Edit Project</h1>
+    </blockquote>
+  </figure> 
+  
+  <%= render 'projects/sidebar' %>
 
-<br>
+  <div class="container">
+    <form class="row row-cols-lg-auto g-3 align-items-center">
+      <div class="d-grid gap-2 col-9 mx-auto">
+        <label for="formGroupExampleInput" class="form-label">Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" aria-label="name" aria-describedby="button-addon2">
+      </div>
+      <div class="d-grid gap-2 col-9 mx-auto">
+        <button class="btn btn-secondary" type="submit" id="button-addon2">Update Name</button>
+      </div>
+    </form>
 
-<div>
-  <%= link_to "Show this project", @project %> |
-  <%= link_to "Back to projects", projects_path %>
-</div>
+    <form class="row row-cols-lg-auto g-3 align-items-center">
+      <div class="d-grid gap-2 col-9 mx-auto">
+        <label for="formGroupExampleInput" class="form-label">Description</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" aria-label="Description" aria-describedby="button-addon2" style="height: 100px">
+      </div>
+      <div class="d-grid gap-2 col-3 mx-auto">
+        <button class="btn btn-secondary" type="submit" id="button-addon2">Update Description</button>
+      </div>
+    </form>
+  </div>
+ 
+
