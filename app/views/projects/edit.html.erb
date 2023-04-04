@@ -7,26 +7,6 @@
   
   <%= render 'projects/sidebar' %>
 
-  <div class="container">
-    <form class="row row-cols-lg-auto g-3 align-items-center">
-      <div class="d-grid gap-2 col-9 mx-auto">
-        <label for="formGroupExampleInput" class="form-label">Name</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" aria-label="name" aria-describedby="button-addon2">
-      </div>
-      <div class="d-grid gap-2 col-9 mx-auto">
-        <button class="btn btn-secondary" type="submit" id="button-addon2">Update Name</button>
-      </div>
-    </form>
-
-    <form class="row row-cols-lg-auto g-3 align-items-center">
-      <div class="d-grid gap-2 col-9 mx-auto">
-        <label for="formGroupExampleInput" class="form-label">Description</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" aria-label="Description" aria-describedby="button-addon2" style="height: 100px">
-      </div>
-      <div class="d-grid gap-2 col-3 mx-auto">
-        <button class="btn btn-secondary" type="submit" id="button-addon2">Update Description</button>
-      </div>
-    </form>
-  </div>
- 
-
+  <%= render "form", project: @project %>
+  
+  <% link_to "Back to projects", projects_path, class:"btn btn-secondary" %>

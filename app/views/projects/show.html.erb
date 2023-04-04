@@ -1,10 +1,19 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @project %>
 
-<div>
-  <%= link_to "Edit Project", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
-
-  <%= button_to "Delete Project", @project, method: :delete %>
+<div class="card" style="width: 18rem;">
+  <h4 class="card-header"> <%= @project.name %> 
+  <a href="/projects/">
+        <img src="https://thumbs.dreamstime.com/b/eye-simple-icon-outline-vector-illustration-isolated-white-background-eps-file-available-125333237.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      </a>
+  </h4>
+  <div class="card-body text-bg-success">
+  <h6 class="card-title"> <%= @project.description %></h6>
+    <p class="card-text"></p>
+    </div>
+    <div class="card-footer btn-group text-bg-secondary" role="group">
+    <%= link_to "Edit", edit_project_path(@project), class:"btn btn-secondary btn-sm" %>
+    <div class="btn-group" role="group">
+    <%= button_to "Delete", @project, method: :delete, class:"btn btn-secondary btn-sm" %>
+    </div>
+  </div>
 </div>

@@ -10,18 +10,25 @@
       </ul>
     </div>
   <% end %>
-<form>
-  <div class="d-grid gap-2 col-9 mx-auto">
-    <label for="formGroupExampleInput" class="form-label">Name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" aria-label="name" aria-describedby="button-addon2">
+
+  
+  <br/>
+  <div class="field form-group d-grid gap-2 col-9 mx-auto">
+  <%= form.label :name %>
+  <%= form.text_field :name, class:"form-control",placeholder:"project name" %>
   </div>
-  <div class="d-grid gap-2 col-9 mx-auto">
-    <label for="formGroupExampleInput" class="form-label">Description</label>
-    <input <type="text" class="form-control" id="formGroupExampleInput" aria-label="Description" aria-describedby="button-addon2">
+
+  <div class="field form-group d-grid gap-2 col-9 mx-auto">
+  <%= form.label :description %>
+  <%= form.text_field :description, class:"form-control", placeholder:"project description" %>
+  </div>
+  
+  <div class="field form-group d-grid gap-2 col-9 mx-auto">
+  <%= form.number_field :user_id, id: :project_user_id, class:"form-control",value: current_user.id, type: :hidden %>
   </div>
 <br/>
-  <div class="d-grid gap-2 d-md-block col-3 mx-auto">
-    <%= form.submit %>
+  <div class="actions d-grid gap-2 d-md-block col-3 mx-auto">
+    <%= form.submit class:'btn btn-secondary' %>
   </div>
-</form>
+
 <% end %>
