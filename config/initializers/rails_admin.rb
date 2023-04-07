@@ -7,7 +7,7 @@ RailsAdmin.config do |config|
   config.current_user_method &:current_user
 
   config.authorize_with do 
-    redirect_to main_app.root_path unless current_user.is_admin? 
+    redirect_to projects_path unless current_user.is_admin? 
   end
   #config.parent_controller = "ApplicationController"
   ### Popular gems integration

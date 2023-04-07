@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  #load_and_authorize_resource
+  
   before_action :set_project, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
@@ -78,4 +78,6 @@ end
     def project_params
       params.require(:project).permit(:name, :description, :user_id)
     end
+
+    
 end
