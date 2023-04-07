@@ -10,12 +10,12 @@
 
   <div class="field form-group">
     <%= f.label :name %><br />
-    <%= f.text_field :name, class:"form-control",placeholder:"name", autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, class:"form-control", autofocus: true, autocomplete: "name" %>
   </div>
   <br/>
   <div class="field form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, class:"form-control",placeholder:"email", autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, class:"form-control", autofocus: true, autocomplete: "email" %>
   </div>
   <br/>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -24,20 +24,17 @@
 
   <div class="field form-group">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, class:"form-control",placeholder:"new password", autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+    <%= f.password_field :password, class:"form-control", autocomplete: "new-password" %>
   </div>
   <br/>
   <div class="field form-group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, class:"form-control",placeholder:"password confirmation", autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, class:"form-control", autocomplete: "new-password" %>
   </div>
   <br/>
   <div class="field form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, class:"form-control",placeholder:"old password", autocomplete: "current-password" %>
+    <%= f.label :current_password %> <br />
+    <%= f.password_field :current_password, class:"form-control", autocomplete: "current-password" %>
   </div>
   <br/>
   <div class="actions text-center">

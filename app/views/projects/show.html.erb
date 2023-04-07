@@ -12,8 +12,6 @@
     </div>
     <div class="card-footer btn-group text-bg-secondary" role="group">
     <%= link_to "Edit", edit_project_path(@project), class:"btn btn-secondary btn-sm" %>
-    <div class="btn-group" role="group">
-    <%= button_to "Delete", @project, method: :delete, class:"btn btn-secondary btn-sm" %>
-    </div>
+    <%= button_to "Delete project", @project, method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-secondary btn-sm" %>
   </div>
 </div>

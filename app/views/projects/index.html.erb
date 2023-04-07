@@ -3,7 +3,7 @@
 
   <figure class="text-center">
     <blockquote class="blockquote">
-        <h1>Projects</h1>
+        <h1 class="fw-bold">Projects</h1>
     </blockquote>
   </figure>  
   
@@ -19,17 +19,22 @@
           <p class="card-text"></p>
           </div>
           <div class="card-footer btn-group text-bg-secondary" role="group" aria-label="Basic example">
-          <%= project.user_id %>
-              <%= button_to "Delete", @project, method: :delete, class:"btn btn-secondary btn-sm" %>
+          <%= button_to "Delete Project", project, method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-secondary btn-sm" %>
         </div>
         <% end %>
         </div>
       </div>
-    <% end %>
+    <% end %> 
   </div>
-
 <% else %>
-  <h1>Colaborate</h1>
 
+<figure class="text-center">
+    <blockquote class="blockquote">
+                <h1 class="card-title"><strong>COLLABORATE</strong></h1>
+                <p class="card-text">A project management tool for developers</p>
+                <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary" %>
+                <%= link_to "Login", new_user_session_path, class:"btn btn-primary" %>    
+    </blockquote>
+</figure> 
 
 <% end %>
