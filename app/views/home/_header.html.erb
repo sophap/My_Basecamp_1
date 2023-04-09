@@ -19,6 +19,7 @@
             </a>
             </button>
           </li>
+          <% if current_user.admin? %>
           <li class="nav-item">
           <button class="btn btn-sm btn-light" type="button">
             <a class="navbar-brand fs-6" href="/admin">
@@ -27,6 +28,7 @@
             </a>
             </button>
           </li>
+          <% end %>
           <li class="nav-item">
           <button class="btn btn-sm btn-light" type="button">
             <a class="navbar-brand fs-6" href="/users/edit">
