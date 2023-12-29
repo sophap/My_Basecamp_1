@@ -1,24 +1,42 @@
-# README
+# Welcome to My Basecamp 1
+MyBaseCamp1 is a web-based project management tool developed using Ruby on Rails framework. It allows users to create and manage projects.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Task
+Features User Registration Users can create, view, and delete their accounts.
 
-Things you may want to cover:
+Session Users can log in and log out of their accounts.
 
-* Ruby version
+Role Permission Admin privileges can be granted or removed by an existing admin user.
 
-* System dependencies
+Project Users can create, view, edit, and delete projects.
 
-* Configuration
+## Description
+Project Users can create, view, edit, and delete projects.
 
-* Database creation
+## Installation
+Install Ruby on Rails framework. Clone the repository from Github. Navigate to the project directory and install the required gems. Run the server.
 
-* Database initialization
+## Usage
+How to Set First Admin User from console
 
-* How to run the test suite
+* rails console
+* @last_user = User.last.admin = true
+* @last_user.save
 
-* Services (job queues, cache servers, search engines, etc.)
+Note: after admin is set subsequent users can be set from edit on admin panel
 
-* Deployment instructions
+Run server
 
-* ...
+bundle install
+
+rails server
+
+if port keeps showing already in use run
+
+bundle exec puma -C config/puma.rb -b tcp://127.0.0.1:3001
+
+### The Core Team
+./my_project  Oladayo Adekoya,  Right Sophia Praise
+
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
